@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>The Button Dashboard</title>
+
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/epoch/0.6.0/epoch.min.css" />
+</head>
+<body>
+    <a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <span class="text-muted">running since: <em id="start-time"></em></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="panel panel-info">
+                    <div class="panel-heading">Timer</div>
+
+                    <div class="panel-body">
+                        <div class="text-center">
+                            <h2 id="timer"></h2>
+
+                            <progress id="timer-progress" min="0" max="60" step="1" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="panel panel-info">
+                    <div class="panel-heading">Users</div>
+
+                    <div class="panel-body">
+                        <div class="text-center">
+                            <h2 id="participants-count"></h2>
+
+                            <progress id="participants-count-progress" min="0" max="3100000" step="1" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="panel panel-info">
+                    <div class="panel-heading">Presses*</div>
+
+                    <div class="panel-body">
+                        <div class="text-center">
+                            <h2 id="presses-count">-</h2><br/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="panel panel-info">
+                    <div class="panel-heading">Lowest Time*</div>
+
+                    <div class="panel-body">
+                        <div class="text-center">
+                            <h2 id="lowest-time">-</h2><br/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">Presses*</div>
+
+                    <div class="panel-body">
+                        <div class="text-center">
+                            <div id="user-chart" style="width: 100%; height:100px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">PPS*</div>
+
+                    <div class="panel-body">
+                        <div class="text-center">
+                            <div id="pps-chart" style="width: 100%; height:100px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">Flair Distribution*</div>
+
+                    <div class="panel-body">
+                        <table id="distribution" class="table text-large">
+                            <tbody>
+                                <tr>
+                                    <td class="text-center flair-purple">0</td>
+                                    <td class="text-center flair-blue">0</td>
+                                    <td class="text-center flair-green">0</td>
+                                    <td class="text-center flair-yellow">0</td>
+                                    <td class="text-center flair-orange">0</td>
+                                    <td class="text-center flair-red">0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted text-center">
+                <a href="http://www.reddit.com/user/I_am_kenny/">/u/i_am_kenny</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="dist/app.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-61648576-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>

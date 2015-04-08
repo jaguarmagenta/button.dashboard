@@ -1,0 +1,25 @@
+{
+  "name": "button.dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bower-webpack-plugin": "^0.1.8",
+    "css-loader": "^0.9.1",
+    "gulp": "^3.8.11",
+    "gulp-webpack": "^1.3.1",
+    "style-loader": "^0.9.0",
+    "webpack": "^1.8.0"
+  },
+  "dependencies": {
+    "d3": "^3.5.5",
+    "jquery": "^2.1.3",
+    "moment": "^2.10.0",
+    "wolfy87-eventemitter": "^4.2.11"
+  }
+}
